@@ -20,7 +20,7 @@ public class NotificationScheduler {
 
     public static final String REMINDER_MESSAGE = "Dear %s, the book '%s' is overdue. Please return it as soon as possible.";
 
-//    @Scheduled(cron = "0 0 0 * * ?")
+    @Scheduled(cron = "0 0 0 * * ?")
     public void sendBookDueReminders() {
         List<BookLending> overdueLendings = bookLendingService.getOverdueLendings();
         
